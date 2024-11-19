@@ -46,9 +46,12 @@ window.addEventListener('load', function() {
 
 /** Play Music **/
 document.addEventListener('DOMContentLoaded', function() {
-    var audio = document.getElementById('music');
-    var modal = new bootstrap.Modal(document.getElementById('musicModal'));
-    var musicIcon = document.getElementById('musicIcon');
+    var modalElement = document.getElementById('musicModal');
+    if (!modalElement) {
+        console.error('Element with ID "musicModal" not found.');
+        return;
+    }
+    var modal = new bootstrap.Modal(modalElement);
 
     // Function to update the music icon based on audio state
     function updateMusicIcon() {
