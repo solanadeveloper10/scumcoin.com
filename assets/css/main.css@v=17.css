@@ -1,0 +1,786 @@
+@font-face {
+  font-family: SaoTorpes;
+  font-display: swap;
+  src: url(../fonts/SaoTorpes.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: MoreSugar;
+  font-display: swap;
+  src: url(../fonts/moresugar/MoreSugar-Regular.otf) format("opentype");
+  font-weight: 400;
+  font-style: normal
+}
+
+@font-face {
+  font-family: MoreSugarThin;
+  font-display: swap;
+  src: url(../fonts/moresugar/MoreSugar-Thin.otf) format("opentype");
+  font-weight: 400;
+  font-style: normal
+}
+
+body{
+  background-color: #fefaef;
+  font-family: MoreSugarThin, "Poppins Placeholder", sans-serif;
+}
+
+.container {
+  max-width: 960px;
+}
+
+a{
+  text-decoration: none;
+  font-family: MoreSugarThin, "Poppins Placeholder", sans-serif;
+}
+
+/*
+ * Custom translucent site header
+ */
+
+.site-header {
+  background-color: rgba(0, 0, 0, .85);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+}
+.site-header a {
+  color: #8e8e8e;
+  transition: color .15s ease-in-out;
+}
+.site-header a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*
+ * Extra utilities
+ */
+
+.flex-equal > * {
+  flex: 1;
+}
+@media (min-width: 768px) {
+  .flex-md-equal > * {
+    flex: 1;
+  }
+}
+
+
+/** NAVBAR **/
+.navbar{
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.navbar .navbar-brand, .navbar .navbar-brand a{
+  font-family: MoreSugar;
+  color: #2e2312 !important;
+}
+
+.navbar .nav-link{
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #333 !important;
+  border-radius: 5px;
+  margin-right: 1em;
+  font-family: MoreSugar, "Poppins", sans-serif;
+  padding: 20px 0;
+}
+
+.navbar .nav-link:hover{
+  background-color: rgba(255,255,255,0.5);
+}
+
+
+.navbar .buy_now img{
+  height: auto;
+  width: 70%;
+  margin-left: 0;
+  padding-bottom: 20px;
+  margin: auto;
+}
+
+.navbar .buy_now img:hover{
+  opacity: 0.8;
+}
+
+.navbar-collapse{
+  text-align: center;
+}
+
+.navbar-light .navbar-toggler{
+  background-color: rgba(255,255,255,0.5);
+  border: 1px solid #eae1cb;
+}
+
+.music .modal-content{
+  border: 5px solid #000;
+  border-radius: 20px;
+  padding: 40px 10px;
+  background: #fff9e2;
+  font-family: MoreSugar;
+}
+
+.music .title{
+  font-family: MoreSugar;
+  font-size: 30px;
+  text-transform: capitalize;
+}
+
+.music .yessir{
+  background: #e9e75d;
+  color: #000;
+  border: 2px solid #000;
+}
+
+.music .naa{
+  border: 2px solid #b2b2b2;
+}
+
+/** SECTION BANNER **/
+.banner{
+  background-image: url("../img/bg.png");
+  background-position: 100%, 100%;
+  background-size: cover;
+}
+
+.banner .banner_container{
+  overflow: hidden;
+}
+
+
+.banner .wak{
+  color:#FFF;
+  border: 5px solid #000;
+  border-bottom: 0;
+  background: #fff8e1;
+  background: linear-gradient(rgb(0 0 0 / 60%), rgb(255 255 255 / 30%)), url(../img/wak/background.png);
+  background-position: 100%, 100%;
+  background-size: cover;
+  padding: 20px 40px;
+  border-radius: 20px 20px 0 0;
+  box-shadow: 0px -2px 8px 0px rgb(0 0 0 / 40%);
+}
+
+.banner .wak strong{
+  color: #f9d05c;
+}
+
+.banner .wak .character{
+  animation: breathing 2s ease infinite;
+}
+
+.banner .generator:hover{
+  transform: scale(1.1);
+  transition: all .15s ease-in-out;
+}
+
+.banner .main_title{
+  margin-top: 10vh;
+  margin-bottom: 5vh;
+}
+
+.banner .character img{
+  margin-bottom: -3em;
+  /* height: 60vh; */
+  max-width: 100%;
+  max-height: 70vh;
+}
+
+.banner .banner_socials{
+  padding: 1em;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.banner .banner_socials.mobile{
+  border-radius: 0;
+}
+
+
+.banner .banner_socials img{
+  border-radius: 100%;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  width: 50px;
+  height: 50px;
+}
+
+.banner .banner_socials img:hover{
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+
+
+/** SECTION CA **/
+.ca{
+}
+
+.ca .ca_container{
+  border-top: 5px solid #000;
+  border-bottom: 5px solid #000;
+  background-color: #baa674;
+  background-image: url("../img/rocktexture2.png");
+  background-position: 100%, 100%;
+  background-size: cover;
+}
+
+.ca button{
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+
+/** SECTION ABOUT **/
+.about{
+  
+}
+
+.about .about_container{
+  
+}
+
+.about .about_info{
+  margin: 0.25em;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 1em;
+}
+
+.about .about_info .videoshorts video{
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.about .about_info img{
+  border-radius: 1em;
+}
+
+.about .about_info .title{
+  font-family: MoreSugar;
+  font-size: 40px;
+  text-transform: capitalize;
+}
+
+.about .about_info .view_proof{
+  padding: 10px 30px;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 2px solid #a77123;
+  color: #FFF;
+  background-color: #000;
+  font-weight: bold;
+  animation: breathing 1s ease infinite;
+}
+
+.about .about_info .special{
+  color:#a77123;
+}
+
+
+
+/** SECTION TOKENOMICS **/
+.tokenomic{
+  overflow: hidden;
+}
+
+.tokenomic .token_marquee_container{
+  position: relative;
+  left: -5px;
+  width: 110%;
+  height: 150px;
+  overflow: hidden;
+  background-color: #dddb34;
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  border-top: 5px solid #000;
+  border-bottom: 5px solid #000;
+  z-index: 10;
+  box-shadow: 0 0 12px 4px rgba(0, 0, 0, 0.5);
+}
+
+.tokenomic .token_marquee_lines{
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 30px;
+  z-index: 9;
+}
+
+.tokenomic .token_marquee_line {
+  /* margin-top: -70px; */
+}
+
+.tokenomic .token_marquee_line:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: calc(100% - 8px);
+}
+
+.tokenomic .token_marquee_line-row {
+  -webkit-animation: scrolling 1100s linear infinite;
+  animation: scrolling 1100s linear infinite;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.tokenomic .token_marquee_line-text {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 70px;
+  letter-spacing: 0;
+  margin-right: 30px;
+}
+
+.tokenomic .token_marquee_devider{
+  background-color: #f7dca2;
+  width: 110%;
+  -webkit-transform: rotate(-3deg);
+  transform: rotate(-3deg);
+  margin-bottom: -60px;
+  height: 70px;
+}
+
+.tokenomic .tokenomic_container{
+  background-color: #f7dca2;
+}
+
+
+.tokenomic .title{
+  font-family: MoreSugar;
+  font-size: 60px;
+  text-transform: capitalize;
+}
+
+.tokenomic .value_wrapper{
+  padding: 60px 0;
+}
+
+.tokenomic .value_container .col:nth-child(1){
+  background-color: #FFF;
+  border: 5px solid #cbb79a;
+}
+
+.tokenomic .value_container .col:nth-child(2){
+  color: #edd169;
+  background-color: #000;
+  border: 5px solid #35280d;
+}
+
+.tokenomic .value_wrapper h2{
+  font-weight: bold;
+  font-size: 30px;
+  text-transform: uppercase;
+}
+
+.tokenomic .value_wrapper span{
+  font-weight: bold;
+  font-size: 50px;
+}
+
+/** SECTION SHORT COMICS **/
+.comics{
+}
+
+.comics .title{
+  font-family: MoreSugar;
+  font-size: 60px;
+  text-transform: capitalize;
+}
+
+.comics .comics_flipbook_container{
+  position: relative;
+  margin: auto;
+}
+
+.comics #comics_flipbook{
+  min-height: 60vh;
+  background: rgb(48, 41, 24);
+}
+
+
+/** SECTION MEMES **/
+.meme{
+  
+}
+
+.meme .meme_container{
+  
+}
+
+.meme .title{
+  font-family: MoreSugar;
+  font-size: 60px;
+  text-transform: capitalize;
+}
+
+.meme .sub-title{
+  font-family: MoreSugar;
+  padding: 1em;
+  padding-bottom: 0.7em;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: auto;
+  display: inline-block;
+  margin-top: -40px;
+  z-index: 10;
+}
+
+.meme .static_meme img{
+  height: 300px;
+}
+
+.meme .conqueredkols img{
+  height: 300px;
+}
+
+.meme .stickers img{
+  height: 200px;
+}
+
+.meme .sticker_download{
+  background: linear-gradient( rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2) ), url("../img/stickerpacks.png");
+  background-position: 100%, 100%;
+  background-size: cover;
+  border-radius: 30px;
+  border: 5px solid #e5dfd7;
+}
+
+.meme .sticker_download .mini_title{
+  font-family: MoreSugar;
+  font-size: 50px;
+  text-transform: capitalize;
+  text-shadow: 0px 5px 20px #FFF;
+  color: #000;
+}
+
+.meme .sticker_download a{
+  padding: 1em;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  width: auto;
+  display: inline-block;
+  color: #000;
+  font-weight: bold;
+}
+
+.meme .sticker_download a:hover{
+  transform: scale(1.1);
+  transition: all .15s ease-in-out;
+}
+
+/** SECTION MEME GENERATORS **/
+.meme_generator{
+  
+}
+
+.meme_generator .meme_generator_container{
+  
+}
+
+.meme_generator .title{
+  font-family: MoreSugar;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+
+.meme_generator_container{
+  margin: auto;
+  overflow: hidden;
+}
+
+.meme_generator #canvas-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.meme_generator #canvas {
+  max-width: 100%;
+  border: 5px solid #000;
+  border-radius: 20px;
+  display: block; /* Ensures the canvas doesn't add extra space */
+}
+
+.meme_generator #upload-btn, .meme_generator #save-btn {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  outline: none;
+}
+
+.meme_generator #upload-btn {
+  background-color: #82775e;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  outline: none;
+}
+.meme_generator #save-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+.meme_generator #save-btn:hover, .meme_generator #upload-btn:hover {
+  opacity: 0.8;
+}
+
+/** SECTION MERCHANDISE **/
+.merchandise{
+  border-top: 5px solid #aca28c;
+  background: rgb(77,50,15);
+  background: -moz-linear-gradient(318deg, rgba(77,50,15,1) 0%, rgba(59,54,12,1) 43%, rgba(2,20,0,1) 63%, rgba(47,20,12,1) 100%);
+  background: -webkit-linear-gradient(318deg, rgba(77,50,15,1) 0%, rgba(59,54,12,1) 43%, rgba(2,20,0,1) 63%, rgba(47,20,12,1) 100%);
+  background: linear-gradient(318deg, rgba(77,50,15,1) 0%, rgba(59,54,12,1) 43%, rgba(2,20,0,1) 63%, rgba(47,20,12,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4d320f",endColorstr="#2f140c",GradientType=1);
+}
+
+.merchandise .merchandise_container{
+}
+
+.merchandise .title{
+  color: #CCC;
+  font-family: MoreSugar;
+  font-size: 50px;
+  text-transform: capitalize;
+}
+
+.merchandise .title i{
+  font-size: 30px;
+  color: #a26c1f;
+}
+
+.merchandise .item_wrapper{
+  padding: 1.5em;
+  border: thin solid #DDD;
+  cursor: pointer;
+  background-color: #FFF;
+  transition: 0.2s ease-in-out all;
+  border-radius: 5px;
+}
+
+.merchandise .item_wrapper:hover{
+  transform: scale(1.02);
+}
+
+.merchandise .item_wrapper img{
+  width: 100%;
+}
+
+.merchandise .item_wrapper h3{
+  border-top: thin solid #EEE;
+  padding-top: 20px;
+}
+
+/** SECTION FOOTER **/
+
+footer{
+  border-top: 5px solid #000;
+  border-bottom: 5px solid #000;
+  background-color: #229bb8;
+  background-image: url("../img/watertexture.png");
+  background-position: 100%, 100%;
+  background-size: cover;
+}
+
+
+footer .socials{
+}
+
+footer .socials img{
+  border-radius: 100%;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  width: 70px;
+  height: 70px;
+}
+
+footer .socials img:hover{
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+/** KEYFRAMES **/
+
+@keyframes breathing {
+  0% {
+    transform: scale(1, 1);
+  }
+  50% {
+    transform: scale(1.1, 1.1);
+  }
+  100% {
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes scrolling {
+  0% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  100% {
+      -webkit-transform: translateX(-28781.5px);
+      transform: translateX(-28781.5px);
+  }
+}
+
+/** MAX MEDIA **/
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) { 
+  
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+  
+}
+
+/** MIN MEDIA **/
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+  .navbar .nav-link{
+    padding: 0;
+  }
+
+  .navbar .buy_now img{
+    transform: scale(4);
+    height: 20px;
+    width: auto;
+    margin-left: 50px;
+    padding: 0;
+  }
+
+  .banner .character img{
+    margin-top: 20vh;
+  }
+
+  .banner .main_title{
+    margin-bottom: 30vh;
+  }
+
+  .about .about_info{
+    margin: auto;
+    width: 70vw;
+    margin-top: 260px;
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 1em;
+  }
+
+  .about .about_info .title{
+    font-size: 60px;
+  }
+
+  .about .about_info .videoshorts{
+    text-align: center;
+    margin-top: -260px;
+    margin-bottom: 50px;
+  }
+
+  .about .about_info .videoshorts video{
+    border-radius: 5px;
+    max-height: 60vh;
+    box-shadow: 0px 0px 30px 10px rgb(0 0 0 / 15%);
+  }
+
+  .comics .comics_flipbook_container{
+    width: 70vw;
+  }
+
+  .comics #comics_flipbook{
+    min-height: 700px;
+    background: rgb(48, 41, 24);
+  }
+
+  .meme .static_meme img{
+    height: 500px;
+  }
+  
+  .meme .conqueredkols img{
+    height: 300px;
+  }
+  
+  .meme .stickers img{
+    height: 200px;
+  }
+
+  .merchandise .merchandise_container{
+    margin: auto;
+    width: 60vw;
+  }
+
+  .merchandise .item_wrapper.middle{
+    transform: scale(1.1);
+  }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  
+}

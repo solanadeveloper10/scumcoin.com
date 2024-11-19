@@ -1,0 +1,148 @@
+window.addEventListener('load', function() {
+
+    /** AOS **/
+    AOS.init({
+        duration: 650,
+    });
+
+    /** SPLIDES **/
+    var splide = new Splide( '.static_meme.splide', {
+        autoScroll: {
+        speed: 1,
+        pauseOnHover: false,
+        },
+        type   : 'loop',
+        autoWidth: true,
+        perPage: 4,
+        lazyLoad: true,
+    });
+    splide.mount(window.splide.Extensions);
+
+    var splide2 = new Splide( '.conqueredkols.splide', {
+        autoScroll: {
+        speed: -1,
+        pauseOnHover: false,
+        },
+        type   : 'loop',
+        autoWidth: true,
+        perPage: 4,
+        lazyLoad: true,
+    });
+    splide2.mount(window.splide.Extensions);
+
+    var splide3 = new Splide('.stickers.splide', {
+        autoScroll: {
+        speed: 1,
+        pauseOnHover: false,
+        },
+        type   : 'loop',
+        autoWidth: true,
+        perPage: 4,
+        lazyLoad: true,
+    });
+    splide3.mount(window.splide.Extensions);
+
+});
+
+/** Play Music **/
+document.addEventListener('DOMContentLoaded', function() {
+    var audio = document.getElementById('music');
+    var modal = new bootstrap.Modal(document.getElementById('musicModal'));
+    var musicIcon = document.getElementById('musicIcon');
+
+    // Function to update the music icon based on audio state
+    function updateMusicIcon() {
+        if (audio.paused || audio.muted) {
+            musicIcon.src = 'assets/sound/mute.png'; // Show mute icon
+        } else {
+            musicIcon.src = 'assets/sound/unmute.png'; // Show unmute icon
+        }
+    }
+
+    // Automatically open the modal on page load
+    modal.show();
+
+    // Play Music Button handler
+    document.getElementById('playMusicButton').addEventListener('click', function() {
+        audio.muted = false; // Unmute the audio
+        audio.play().catch(function(error) {
+            console.error('Playback failed:', error);
+        });
+        // Hide the modal after clicking Play Music
+        modal.hide();
+    });
+
+    // Update icon when the audio starts or stops playing
+    audio.addEventListener('play', updateMusicIcon);
+    audio.addEventListener('pause', updateMusicIcon);
+    audio.addEventListener('volumechange', updateMusicIcon);
+
+    // Optional: Update icon if the user manually interacts with the audio
+    musicIcon.addEventListener('click', function() {
+        if (audio.paused) {
+            audio.play().catch(function(error) {
+                console.error('Playback failed:', error);
+            });
+        } else {
+            audio.pause();
+        }
+        updateMusicIcon();
+    });
+});
+
+/** Copy Address **/
+document.getElementById('copyCA').addEventListener('click', function() {
+const caValue = document.getElementById('copyCAValue').textContent;
+// Use the Clipboard API to copy the text
+navigator.clipboard.writeText(caValue).then(function() {
+    alert('CA copied to clipboard!');
+}).catch(function(err) {
+    alert('Failed to copy CA.');
+});
+});
+
+/** Navbar Close **/
+function collapseNavbar() {
+    const navbarCollapse = document.getElementById('navbarCollapse');
+    const bootstrapCollapse = new bootstrap.Collapse(navbarCollapse, {
+        toggle: false
+    });
+    bootstrapCollapse.hide();
+}
+const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    navLinks.forEach(link => {
+    link.addEventListener('click', function() {
+        collapseNavbar();
+    });
+});
+document.addEventListener('click', function(event) {
+    const target = event.target;
+    if (!target.closest('.navbar') && !target.closest('.navbar-toggler')) {
+        collapseNavbar();
+    }
+});
+
+/** Hover show merch concept **/
+document.querySelectorAll('.merchandise .item_wrapper').forEach(wrapper => {
+    // Add a hover event listener
+    wrapper.addEventListener('mouseenter', function() {
+      const img = wrapper.querySelector('img');
+      if (img) {
+        const newSrc = img.getAttribute('data-concept');
+        if (newSrc) {
+          img.src = newSrc;
+        }
+      }
+    });
+  
+    // Optional: Reset the src when the mouse leaves
+    wrapper.addEventListener('mouseleave', function() {
+      const img = wrapper.querySelector('img');
+      if (img) {
+        const newSrc = img.getAttribute('data-src');
+        if (newSrc) {
+          img.src = newSrc;
+        }
+      }
+    });
+  });

@@ -1,0 +1,842 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>$Scum On Solana</title>
+    <!-- Bootstrap core CSS -->
+    <link href="dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- AOS core CSS -->
+    <link href="dist/css/aos.css" rel="stylesheet">
+    <!-- Splide core CSS -->
+    <link href="dist/css/splide.min.css" rel="stylesheet">
+    <!-- 3D Flipbook core CSS -->
+    <link href="dist/css/flipbook.min.css" rel="stylesheet">
+
+    <!-- ICONS -->
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#333333">
+    <meta name="msapplication-TileColor" content="#fefaef">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- PRELOADS ASSETS -->
+    <link rel="preload" as="image" href="assets/img/merchandise/apparel-concept.png">
+    <link rel="preload" as="image" href="assets/img/merchandise/figurine-concept.png">
+    <link rel="preload" as="image" href="assets/img/merchandise/mask-concept.png">
+    
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css@v=17.css" rel="stylesheet">
+  </head>
+  <body>
+    
+    <!-- SECTION: NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-brand" href="/">
+
+          <a href="index.html">
+            <img src="assets/img/logo.png" style="width: 40px;"/>
+            <strong>$</strong>Scum
+          </a>
+
+          <img src="assets/sound/mute.png" id="musicIcon" style="width: 40px; cursor: pointer;"/>
+
+          <audio id="music" preload="auto" loop class="d-none">
+            <source src="assets/sound/jungle.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse">
+          <ul class="navbar-nav mb-2 mb-md-0">
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="index.html#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="index.html#comics">Comics</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="index.html#memes">Memes</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link scrollto" href="index.html#merchandise">Merchandise</a>
+            </li>
+            <li class="nav-item">
+              <a target="_blank" class="nav-link" href="https://game.scumcoin.com">Games</a>
+            </li>
+          </ul>
+          <a target="blank" href="https://pump.fun/GRAWMpxXuoEdK4UvKPhGN3jqrGT2K69bksNhmSsSpump" class="ms-4 buy_now">
+            <img src="assets/img/buynow.gif"/>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- SECTION: BANNER -->
+    <section id="banner" class="banner">
+      <div class="banner_container row align-items-end text-center m-0">
+
+        <div class="col-md-3 mx-auto">
+
+          <!-- <img src="assets/img/scumonsolana.png" class="w-100 main_title" data-aos="zoom-in"/> -->
+          <img src="assets/img/scumonsolana.png" class="w-100 main_title"/>
+
+          <!-- <a href="#meme_generator" class="btn ms-2 generator d-none d-md-block scrollto" type="button" data-aos="slide-up"> -->
+          <!-- <a href="#meme_generator" class="btn ms-2 generator d-none d-md-block scrollto" type="button">
+            <div class="row  align-items-center justify-content-center">
+              <div class="col-md-3">
+                <img src="assets/img/cog.png" style="width: 40px;"/>
+              </div>
+              <div class="col-md-9 text-start">
+                <span><strong>Generate Your Own Meme</strong></span>
+              </div>
+            </div>
+          </a> -->
+          <a target="_blank" href="https://game.scumcoin.com" class="btn ms-2 wak d-none d-md-block" type="button">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-md-4">
+                <img src="assets/img/wak/character.png@v=2" class="character" style="width: 90px;"/>
+              </div>
+              <div class="col-md-8 text-start">
+                <div><strong>PLAY AS SCUM</strong></div>
+                <span>Beat our Whack-A-Kol Game!</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col mx-auto character">
+          <!-- <img src="assets/img/animatedscum.gif?v=3" data-aos="slide-up"> -->
+          <img src="assets/img/animatedscum.gif@v=3">
+        </div>
+
+        <div class="d-none d-md-flex col-md-3 my-5 justify-content-center">
+          <div class="banner_socials" data-aos="fade-in">
+            <a target="_blank" href="https://t.me/scumonsolana" class="me-3">
+              <img src="assets/img/socials/tg.png"/>
+            </a>
+            <a target="_blank" href="https://x.com/ScumOnSolana" class="me-3">
+              <img src="assets/img/socials/x.png"/>
+            </a>
+            <a target="_blank" href="https://dexscreener.com/solana/GRAWMpxXuoEdK4UvKPhGN3jqrGT2K69bksNhmSsSpump">
+              <img src="assets/img/socials/dex.png"/>
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- <div class="d-block d-md-none text-center">
+        <a href="#meme_generator" class="btn ms-2 generator d-block d-md-none scrollto" type="button">
+          <img src="assets/img/cog.png" class="me-2" style="width: 40px; height: 40px; margin-top: -5px;"/>
+          <span><strong>Generate Your Own Meme</strong></span>
+        </a>
+      </div> -->
+      <div class="d-block d-md-none text-center">
+        <a href="https://game.scumcoin.com" class="btn mx-2 wak d-block d-md-none" type="button">
+          <img src="assets/img/wak/character.png@v=2" class="me-2 character" style="width: 80px;"/>
+          <div><strong>PLAY AS SCUM</strong></div>
+          <span>Beat our Whack-A-Kol Game!</span>
+        </a>
+      </div>
+
+      <div class="d-block d-md-none banner_socials mobile text-center">
+        <a target="_blank" href="https://t.me/scumonsolana" class="me-3">
+          <img src="assets/img/socials/tg.png"/>
+        </a>
+        <a target="_blank" href="https://x.com/ScumOnSolana" class="me-3">
+          <img src="assets/img/socials/x.png"/>
+        </a>
+        <a target="_blank" href="https://dexscreener.com/solana/GRAWMpxXuoEdK4UvKPhGN3jqrGT2K69bksNhmSsSpump">
+          <img src="assets/img/socials/dex.png"/>
+        </a>
+      </div>
+    </section>
+
+
+    <!-- SECTION: CA -->
+    <section id="ca" class="ca">
+      <div class="ca_container text-center p-3 m-0">
+        <div class="d-flex justify-content-center align-items-center">
+          <div class="me-3 d-none d-md-block"><strong>CA: <span id="copyCAValue">GRAWMpxXuoEdK4UvKPhGN3jqrGT2K69bksNhmSsSpump</span></strong></div>
+          <button class="btn px-3" id="copyCA"><img src="assets/img/svg/copy.svg" style="width: 10px;"> COPY ADDRESS</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: ABOUT -->
+    <section id="about" class="about mt-2">
+      <div class="about_container m-0">
+
+        <div class="about_info pt-md-5">
+
+          <div class="videoshorts d-none d-md-block">
+            <video controls class="p-md-3" loop poster="assets/img/scumshortsposter.png@v=5">
+              <source src="assets/vid/scumshorts.mp4@v=4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+          </div>
+
+          <div class="row m-3 m-md-5 justify-content-center align-items-center">
+            <div class="col-md-4">
+              <img src="assets/img/original.jpeg" class="w-100 d-none d-md-block"/>
+            </div>
+            <div class="col">
+              <h1 class="mb-4 mt-4 mt-md-0 title text-center text-md-start">Who is Scum?</h1>
+
+              <div class="videoshorts d-md-none mb-4">
+                <video controls class="p-md-3" loop poster="assets/img/scumshortsposter.png@v=5">
+                  <source src="assets/vid/scumshorts.mp4@v=4" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+
+              In the deep jungle lies a creature known as Scum. It hunts for the finest meal, 
+              with its favorite being brains. Scum slurs its tongue deep into heads and skulls to 
+              feast on the juicy brain meat. Now, it is once again on the hunt for the finest meal. 
+              Legend has it that the lower the IQ of a person, the juicier and more delicious it becomes.
+              <strong>Let the hunt begin!</strong>
+              <br/>
+              <img src="assets/img/original.jpeg" class="w-100 mb-4 d-md-none my-4"/>
+              <br/>
+              <span class="special"><strong>It is the first artwork ever showcased on Matt Furie's website</span></strong></span>, <a target="_blank" href="http://www.mattfurie.com">http://www.mattfurie.com</a>, 
+              Scum is a mythical creature with infinite meme potential and is remarked as the most proud and intrinsic work from Matt Furie himself.
+              <br/>
+              <br/>
+              <a href="proof.html" class="btn view_proof">View Proof</a>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- SECTION: TOKENOMICS -->
+    <section id="tokenomic" class="tokenomic">
+
+      <div class="token_marquee_container mt-5">
+        <div class="token_marquee_lines">
+          <div class="token_marquee_line">
+              <div class="token_marquee_line-row">
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+                <div class="token_marquee_line-text">$SCUM</div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="token_marquee_devider"></div>
+
+      <div class="tokenomic_container text-center pt-5 m-0">
+
+        <h1 class="mb-5 pt-5 title">Tokenomics</h1>
+
+        <div class="value_container row m-0 g-0 justify-content-center align-items-center">
+          <div class="col col-12 col-md-6">
+            <div class="value_wrapper">
+              <h2>Token supply</h2>
+              <span>1 Billion</span>
+            </div>
+          </div>
+          <div class="col col-12 col-md-6">
+            <div class="value_wrapper">
+              <h2>Tax</h2>
+              <span>0% Buy/Sell</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- <div class="d-md-flex flex-md-equal w-100 my-md-3 ps-md-3">
+        <div class="bg-dark me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center text-white overflow-hidden">
+          <div class="my-3 py-3">
+            <h2 class="display-5">Token supply</h2>
+            <p class="lead">1 Billion</p>
+          </div>
+        </div>
+        <div class="bg-light me-md-3 pt-3 px-3 pt-md-5 px-md-5 text-center overflow-hidden">
+          <div class="my-3 p-3">
+            <h2 class="display-5">Tax</h2>
+            <p class="lead">0% Buy/Sell</p>
+          </div>
+        </div>
+      </div> -->
+    
+    </section>
+
+    <!-- SECTION: SHORT COMICS -->
+    <section id="comics" class="comics mt-5 pt-5">
+      <div class="comics_container">
+        <h1 class="mb-5 title text-center">Comics</h1>
+        <div class="comics_flipbook_container">
+          <div id="comics_flipbook"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION: MEMES -->
+    <section id="memes" class="meme mt-5">
+      <div class="meme_container py-md-5 m-0">
+
+        <h1 class="mb-5 title text-center">Memes</h1>
+      
+        <div class="static_meme splide mb-5 pb-md-5" role="group">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"><img src="assets/img/memes/1.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/2.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/3.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/4.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/5.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/6.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/7.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/8.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/9.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/10.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/11.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/12.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/13.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/14.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/15.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/16.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/17.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/18.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/19.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/20.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/21.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/22.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/23.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/24.jpg@v=2" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/memes/25.jpg@v=2" loading="lazy"/></li>
+            </ul>
+          </div>
+        </div>
+      
+        <div class="conqueredkols splide mt-md-5 pt-md-5" role="group">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"><img src="assets/img/pfpkols/0.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/1.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/2.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/3.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/4.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/5.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/6.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/7.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/8.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/9.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/10.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/11.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/12.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/13.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/14.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/15.jpg" loading="lazy"/></li>
+              <!-- 
+              <li class="splide__slide"><img src="assets/img/pfpkols/16.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/17.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/18.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/19.jpg" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/pfpkols/20.jpg" loading="lazy"/></li> 
+              -->
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center">
+          <h1 class="ps-5 sub-title">
+            Conquered KOLS
+            <img src="assets/img/pfpkols/catlaughing.png" style="width: 100px;"/>
+          </h1>
+        </div>
+      
+        <div class="stickers splide mt-4" role="group">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <li class="splide__slide"><img src="assets/img/stickers/8.gif" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/23.png" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/24.png" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/1.webp.html" loading="lazy"/></li>
+              <li class="splide__slide"><img src="https://scumcoin.com/assets/img/stickers/13.png" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/14.png" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/2.webp.html" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/9.gif" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/3.webp.html" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/15.png" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/16.png" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/4.webp.html" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/11.gif" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/5.webp.html" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/17.png" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/18.png" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/6.webp.html" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/19.png" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/20.png" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/12.gif" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/7.webp.html" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/21.png" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/22.png" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/10.webp.html" loading="lazy"/></li>
+              <li class="splide__slide"><img src="assets/img/stickers/25.png" loading="lazy"/></li>
+
+            </ul>
+          </div>
+        </div>
+
+        <div class="text-center mb-5">
+          <h1 class="ps-5 sub-title">
+            Sticker Packs
+            <img src="assets/img/stickers/sticker.png" style="width: 50px;"/>
+          </h1>
+        </div>
+
+        <div class="sticker_download m-2 m-md-5 p-5 text-center">
+          <h2 class="mt-5 pt-5 mini_title">Telegram Sticker Packs</h2>
+          <a target="_blank" href="https://t.me/addstickers/scumstick" class="mt-2 me-2">
+            Still Stickers
+          </a>
+          <a target="_blank" href="https://t.me/addstickers/scumnimate" class="mt-2">
+            Animated Stickers
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: MEME GENERATOR -->
+    <section id="meme_generator" class="meme_generator mb-5 mt-4 pb-5 d-none d-md-block">
+      <div class="meme_generator_container">
+
+        <h1 class="mb-5 title text-center">Generate your own PFP!</h1>
+      
+        <div id="canvas-container">
+          <canvas id="canvas" width="400" height="400"></canvas>
+        </div>
+
+        <div class="text-center">
+
+          <!-- <div class="text-muted mt-5 mb-3"><i>*Please use laptop/computer device to use this feature.</i></div> -->
+
+          <button id="upload-btn" class="upload-button">
+            <img src="assets/img/svg/upload.svg" class="me-2" style="width: 20px; margin-top: -5px;"/>
+            Upload Your Own Head
+          </button>
+          <input type="file" id="file-input" class="d-none" accept="image/*" />
+          <button id="save-btn">
+            <img src="assets/img/svg/save.svg" class="me-2" style="width: 20px; margin-top: -5px;"/>
+            Save PFP
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION: MERCHANDISE -->
+    <section id="merchandise" class="merchandise mt-4 pt-5 pb-md-5">
+      <div class="merchandise_container mt-5 mb-md-5 pb-md-5">
+
+        <h1 class="mb-5 pb-md-5 title text-center">Buy Our Merchs <i>(Coming Soon)</i></h1>
+
+        <div class="row m-0 g-0 justify-content-center align-items-center text-center">
+          <div class="col col-12 col-md-4">
+            <div class="item_wrapper mx-4 mb-4 m-md-0">
+              <img src="assets/img/merchandise/apparel.png" data-src="/assets/img/merchandise/apparel.png" data-concept="/assets/img/merchandise/apparel-concept.png" alt="apparel"/>
+              <h3><strong>Apparel</strong></h3>
+            </div>
+          </div>
+          <div class="col col-12 col-md-4">
+            <div class="item_wrapper mx-4 mb-4 m-md-0 middle">
+              <img src="assets/img/merchandise/figurine.png" data-src="/assets/img/merchandise/figurine.png" data-concept="/assets/img/merchandise/figurine-concept.png" alt="figurine"/>
+              <h3><strong>Figurine</strong></h3>
+            </div>
+          </div>
+          <div class="col col-12 col-md-4">
+            <div class="item_wrapper mx-4 mb-4 m-md-0">
+              <img src="assets/img/merchandise/mask.png" data-src="/assets/img/merchandise/mask.png" data-concept="/assets/img/merchandise/mask-concept.png" alt="figurine"/>
+              <h3><strong>Mask</strong></h3>
+            </div>
+          </div>
+        </div>
+
+        </div>
+
+      </div>
+    </section>
+    
+    <footer class="py-5">
+      <div class="container">
+        <div class="row align-items-end">
+          <div class="col-md-8 text-light">
+            <div class="row align-items-center justify-content-center">
+              <div class="col-3">
+                <img src="assets/img/footer.gif" class="mb-2 w-100" data-aos="fade-in">
+              </div>
+              <div class="col">
+                <small class="d-block mb-3">&copy; 2024 ALL RIGHTS RESERVED</small>
+                <p>
+                  Disclaimer: This is a memecoin with no intrinsic value. 
+                  Don’t risk money that you can’t afford to lose. The price may go up or it may go down. 
+                  We are not responsible for any loss you incure during trading.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-md">
+            <div class="my-5 text-center text-md-end">
+              <div class="socials">
+                <a target="_blank" href="https://t.me/scumonsolana" class="me-3">
+                  <img src="assets/img/socials/tg.png"/>
+                </a>
+                <a target="_blank" href="https://x.com/ScumOnSolana" class="me-3">
+                  <img src="assets/img/socials/x.png"/>
+                </a>
+                <a target="_blank" href="https://dexscreener.com/solana/GRAWMpxXuoEdK4UvKPhGN3jqrGT2K69bksNhmSsSpump">
+                  <img src="assets/img/socials/dex.png"/>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <!-- Modal -->
+    <div class="modal music fade" id="musicModal" tabindex="-1" aria-labelledby="musicModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content text-center">
+              <div class="modal-body">
+                  <h1 class="title">Continue with music?</h1>
+              </div>
+              <div class="modal-footer justify-content-center border-0">
+                  <button type="button" class="btn btn-dark yessir" id="playMusicButton">Ye</button>
+                  <button type="button" class="btn btn-secondary naa" data-bs-dismiss="modal">Na</button>
+              </div>
+          </div>
+      </div>
+  </div>
+
+    <script src="dist/js/bootstrap.bundle.min.js"></script>
+    <script src="dist/js/aos.js"></script>
+    <script src="dist/js/splide.min.js"></script>
+    <script src="dist/js/splide-extension-auto-scroll.min.js"></script>
+    <script src="dist/js/fabric.min.js"></script>
+    <script src="assets/js/script.js@v=6"></script>
+    <script src="assets/js/memegenerator.js@v=5"></script>
+    <script src="dist/js/jquery.min.js"></script>
+    <script src="dist/js/flipbook.min.js"></script>
+
+    <script type="text/javascript">
+      
+      jQuery(document).ready(function () {
+        // FLIP BOOK
+        jQuery("#comics_flipbook").flipBook({
+          pages: [
+            {src: "/assets/img/comics/1.png?v=2", thumb: "/assets/img/comics/1.png?v=2"},
+            {src: "/assets/img/comics/2.png?v=2", thumb: "/assets/img/comics/2.png?v=2"},
+            {src: "/assets/img/comics/3.png?v=2", thumb: "/assets/img/comics/3.png?v=2"},
+            {src: "/assets/img/comics/4.png?v=2", thumb: "/assets/img/comics/4.png?v=2"},
+            {src: "/assets/img/comics/5.png?v=2", thumb: "/assets/img/comics/5.png?v=2"},
+            {src: "/assets/img/comics/6.png?v=2", thumb: "/assets/img/comics/6.png?v=2"},
+          ],
+          backgroundColor: "rgb(48 41 24)",
+          btnShare: {
+            enabled: false
+          },
+          btnBookmark: {
+            enabled: false
+          },
+          btnDownloadPages: {
+            enabled: false
+          },
+          btnDownloadPdf: {
+            enabled: false
+          },
+          btnPrint: {
+            enabled: false
+          },
+          zoomMin: 1,
+          assets: {
+              preloader: "/assets/img/libs/preloader.jpg",
+              flipMp3: "/dist/audio/turnPage.mp3",
+              spinner: "/assets/img/libs/spinner.gif",
+          }
+        });
+      })
+    </script>
+      
+  </body>
+</html>

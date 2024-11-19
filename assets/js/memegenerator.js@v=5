@@ -1,0 +1,70 @@
+const canvas = new fabric.Canvas("canvas", {
+enableRetinaScaling: false
+});
+const defaultBGImg = "assets/img/meme_generator.png"
+
+// Load the default background image
+fabric.Image.fromURL(defaultBGImg, function (background) {
+    background.set({
+      selectable: false,
+      evented: false,
+      scaleX: canvas.width / background.width,
+      scaleY: canvas.height / background.height,
+    });
+    canvas.setBackgroundImage(background, canvas.renderAll.bind(canvas));
+});
+
+// Handle file input and button click
+document.getElementById('upload-btn').addEventListener('click', function () {
+  document.getElementById('file-input').click();
+});
+
+// Handle image upload
+document.getElementById('file-input').addEventListener('change', function (event) {
+const reader = new FileReader();
+reader.onload = function (event) {
+    // Clear the canvas before adding the new image
+    canvas.clear();
+    
+    // Re-add the background image
+    fabric.Image.fromURL(defaultBGImg, function (background) {
+    background.set({
+        selectable: false,
+        evented: false,
+        scaleX: canvas.width / background.width,
+        scaleY: canvas.height / background.height,
+    });
+    canvas.setBackgroundImage(background, canvas.renderAll.bind(canvas));
+    });
+
+    // Add the new uploaded image
+    fabric.Image.fromURL(event.target.result, function (image) {
+    image.set({
+        left: canvas.width / 2 - image.width / 2,
+        top: canvas.height / 2 - image.height / 2,
+        scaleX: canvas.width / image.width,
+        scaleY: canvas.height / image.height,
+        hasControls: true,
+        hasBorders: true,
+        selectable: true,
+    });
+
+    // Add the image to the canvas
+    canvas.add(image);
+    canvas.setActiveObject(image); // Set the uploaded image as active
+    canvas.renderAll();
+    });
+};
+reader.readAsDataURL(event.target.files[0]);
+});
+
+// Save button click handler
+document.getElementById('save-btn').addEventListener('click', function () {
+    const dataURL = canvas.toDataURL({ format: 'png' });
+    const a = document.createElement('a');
+    a.href = dataURL;
+    a.download = 'meme-image.png';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+});
